@@ -1,6 +1,7 @@
 package com.bridgelabz;
 
 public class TicTacToeGame {
+	
 		static char[] board;
 		public static void main(String[] args) {
 			board=new char[10];
