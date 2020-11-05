@@ -9,7 +9,7 @@ public class TicTacToeGame {
 		board=new char[10];
 		populateBoard();
 		}
-
+		/*Board is created and assigned empty space to each element*/
 		static void populateBoard() {
 			for (int index = 1; index < board.length; index++)
 			{
