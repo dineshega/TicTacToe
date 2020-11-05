@@ -5,17 +5,17 @@ import java.util.Scanner;
 public class TicTacToeGame {
 	
 		static char[] board;
-		static char computer;
 		public static void main(String[] args) 
 		{
 		System.out.println("Welcome to TicTacToe");
 		board=new char[10];
 		populateBoard();
-		char userInput= chooseXorO();
+		char userInput = chooseXorO();
+		char computer; /* computer Input */
 			if (userInput == 'X')
 			{
 				computer = 'O';
-			} 
+			}
 			else
 			{
 				computer = 'X';
@@ -23,7 +23,7 @@ public class TicTacToeGame {
 			System.out.println("userInput " + userInput + " computer entered " + computer);
 		}
 
-		/* usecase2 User and Computer input */
+		/* usecase2 User input */
 		private static char chooseXorO()
 		{
 			Scanner Input = new Scanner(System.in);
@@ -37,7 +37,6 @@ public class TicTacToeGame {
 					return 'O';
 				} else {
 					System.out.println("Invalid choice,Enter again");
-					continue;
 				}
 			}
 		}
