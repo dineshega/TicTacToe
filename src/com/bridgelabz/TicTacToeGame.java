@@ -9,18 +9,8 @@ public class TicTacToeGame {
 	{
 		System.out.println("Welcome to TicTacToe");
 		board=new char[10];
-		populateBoard();
-		char userInput = chooseXorO();
-		char computer; 
-		if (userInput == 'X')
-		{
-			computer = 'O'; /* computer Input */
-		}
-		else
-		{
-			computer = 'X'; /* computer Input */
-		}
-		System.out.println("userInput " + userInput + " computer entered " + computer);
+		createBoard();
+		char userInput=chooseXorO();
 		showBoard();
 	}
 	
@@ -36,6 +26,7 @@ public class TicTacToeGame {
 	/* usecase2 User input */
 	private static char chooseXorO()
 	{
+		char computer='X'; 
 		Scanner Input = new Scanner(System.in);
 		while (true)
 		{	
@@ -43,21 +34,23 @@ public class TicTacToeGame {
 			char user = Input.next().toUpperCase().charAt(0);
 			if (user == 'X')
 			{
-				return 'X';
+				computer='O';
 			} 
 			else if (user == 'O') 
 			{
-				return 'O';
+				computer='X';
 			} 
 			else 
 			{
 				System.out.println("Invalid choice,Enter again");
 			}
+			System.out.println("userInput " + user + " computer entered " + computer);
+			return user;
 		}
 	}
 
 	/* usecase1 Board is created and assigned empty space to each element */
-	private static void populateBoard() 
+	private static void createBoard() 
 	{
 		for (int index = 1; index < board.length; index++)
 		{
