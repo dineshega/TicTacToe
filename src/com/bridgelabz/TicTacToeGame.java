@@ -11,14 +11,14 @@ public class TicTacToeGame {
 		board=new char[10];
 		populateBoard();
 		char userInput = chooseXorO();
-		char computer; /* computer Input */
+		char computer; 
 			if (userInput == 'X')
 			{
-				computer = 'O';
+				computer = 'O'; /* computer Input */
 			}
 			else
 			{
-				computer = 'X';
+				computer = 'X'; /* computer Input */
 			}
 			System.out.println("userInput " + userInput + " computer entered " + computer);
 		}
